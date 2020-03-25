@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>HYHU</title>
+	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 11]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="">
+	<meta name="author" content="Phoenixcoded" />
+
+	<!-- vendor css -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+</head>
+
+<!-- [ auth-signin ] start -->
+<div class="auth-wrapper">
+	<div class="auth-content">
+		<div class="card">
+			<div class="row align-items-center text-center">
+				<div class="col-md-12">
+					<div id ="login_div" class="card-body">
+						<img src="assets/images/logo-dark1.png" alt="" class="img-fluid mb-4">
+						<h4 class="mb-3 f-w-400">Signin</h4>
+						<div class="form-group mb-3">
+							<label class="floating-label" for="Email">Email address</label>
+							<input type="text" class="form-control" id="email_field" placeholder="">
+						</div>
+						<div class="form-group mb-4">
+							<label class="floating-label" for="Password">Password</label>
+							<input type="password" class="form-control" id="password_field" placeholder="">
+						</div>
+						<div class="custom-control custom-checkbox text-left mb-4 mt-2">
+							<input type="checkbox" class="custom-control-input" id="customCheck1">
+							<label class="custom-control-label" for="customCheck1">Save credentials.</label>
+						</div>
+						<button onclick="login()" class="btn btn-block btn-primary mb-4">Login to Account</button>
+						<!--
+						<p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html" class="f-w-400">Reset</a></p>
+						<p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html" class="f-w-400">Signup</a></p>
+					-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [ auth-signin ] end -->
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA063-ngsexQ0rhIvtHRKP0LmB0yBrH5vk",
+      authDomain: "oneclick-73406.firebaseapp.com",
+      databaseURL: "https://oneclick-73406.firebaseio.com",
+      projectId: "oneclick-73406",
+      storageBucket: "oneclick-73406.appspot.com",
+      messagingSenderId: "69122383434"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+<!-- Required Js -->
+<script src="assets/js/index.js"></script>
+<script src="assets/js/vendor-all.min.js"></script>
+<script src="assets/js/plugins/bootstrap.min.js"></script>
+<script src="assets/js/pcoded.min.js"></script>
+
+</body>
+
+</html>

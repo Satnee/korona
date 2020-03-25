@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>E-Pin Gereration</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    
+
+</head>
+<body class="">
+	<!-- [ Pre-loader ] start -->
+	<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div>
+	<!-- [ Pre-loader ] End -->
+	<!-- [ navigation menu ] start -->
+	<nav class="pcoded-navbar menu-light ">
+		<div class="navbar-wrapper  ">
+			<div class="navbar-content scroll-div " >
+				
+				<div class="">
+					<div class="main-menu-header">
+						<img class="img-radius" src="assets/images/user/mlogo.png" alt="User-Profile-Image">
+						<div id="user_div" class="loggedin-div">
+                        <p id="user_para"></p>
+						</div>
+					</div>
+				</div>
+				
+				<ul class="nav pcoded-inner-navbar ">
+					<li class="nav-item pcoded-menu-caption">
+					    <label>Navigation</label>
+					</li>
+					<li class="nav-item">
+					    <a href="home.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">My Page</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="my-gh-details.html">My GH</a></li>
+					        <li><a href="my-ph-details.html">My PH</a></li>
+					    </ul>
+					</li>
+					<li class="nav-item pcoded-menu-caption">
+					    <label>Service</label>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">E-Pin</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="form_elements.html">Buy E-Pin</a></li>
+					        <li><a href="epin-form-list.html">E-Pin List</a></li>
+					        
+					    </ul>
+					</li>
+					<li class="nav-item pcoded-menu-caption">
+					    <label>Settings</label>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">My Profile</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="bank-details.html">Bank Details</a></li>
+					        <li><a href="change-password.html">Change Password</a></li>
+					        
+					    </ul>
+					</li>
+									
+			</div>
+		</div>
+	</nav>
+	<!-- [ navigation menu ] end -->
+	<!-- [ Header ] start -->
+	<header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
+		
+				
+				<div class="m-header">
+					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+					<a href="#!" class="b-brand">
+						<!-- ========   change your logo hear   ============ -->
+						
+						<img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+					</a>
+					<a href="#!" class="mob-toggler">
+						<i class="feather icon-more-vertical"></i>
+					</a>
+				</div>
+				
+				<ul class="navbar-nav ml-auto">
+						<li>
+							<div id ="user_div" class="loggedin-div">
+								<a href="index.html">
+								<span>Logout</span>
+								</a>
+							</div>
+						</li>
+					</ul>			
+	</header>
+	<!-- [ Header ] end -->
+	
+	
+
+<!-- [ Main Content ] start -->
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">E-Pin Generator</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home.html"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#!">E-Pin</a></li>
+                            <li class="breadcrumb-item"><a href="#!">Buy E-Pin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+		
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Basic Component</h5>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+					<center>
+					<div class="col-sm-9">
+					<div class="input-group mb-3">
+					        <label for="inputEmail3" class="col-sm-3 col-form-label">Upload Screenshot</label>
+                                 <div class="col-sm-9">
+								 <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                    <label class="custom-file-label" for="inputGroupFile01"><div align ="left">E-Pin Screenshot</div></label>
+                     </div>
+					 
+					
+                     </div>
+					 
+					 <div class="input-group mb-3">
+					        <label for="inputEmail3" class="col-sm-3 col-form-label">One Pin Amount</label>
+                                
+                                    <input class="form-control" type="text" placeholder="650" readonly>
+                     
+                     </div>
+					
+                      <div class="input-group mb-3">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">Select E-Pin</label>
+                                   <select class="form-control" id="exampleFormControlSelect1" onchange="onchagenfun(this.value)" name="num" id="num">
+                                            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+											<option>10</option><option>15</option><option>20</option><option>25</option><option>30</option>
+											<option>35</option><option>40</option><option>45</option><option>50</option><option>100</option>
+                                        </select>
+                                    </div>
+								
+					<div class="input-group mb-3">
+					        <label for="inputEmail3" class="col-sm-3 col-form-label">Total Amount</label>
+                            <input class="form-control" type="text" id="total_amount" placeholder="650" readonly>
+                     </div>
+					 <center>
+							<button type="submit" class="btn  btn-primary">Submit</button>
+							</center>
+						</div>
+						&nbsp	
+						</center>
+                </div>
+            </div>
+<script>			
+function onchagenfun(num){
+	
+	$("#item_number").val(num);
+	var onepinprice = '650';
+	
+	console.log(num);
+	if(num<6) {
+		var multiply = parseInt(onepinprice)*parseInt(num);
+	} else if(num=="10") {
+		var multiply = "6500";
+	}if(num=="15") {
+		var multiply = "9750";
+	}if(num=="20") {
+		var multiply = "13000";
+	}if(num=="25") {
+		var multiply = "16250";
+	}if(num=="30") {
+		var multiply = "19500";
+	} if(num=="35") {
+		var multiply = "22750";
+	} if(num=="40") {
+		var multiply = "26000";
+	} if(num=="45") {
+		var multiply = "29250";
+	} if(num=="50") {
+		var multiply = "32500";
+	} if(num=="100") {
+		var multiply = "65000";
+	} 
+	
+	
+	$("#total_amount").val("Rs "+multiply);
+	$("#amountf").val(multiply);
+	
+}
+</script>
+           
+            <!-- [ form-element ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+
+    </div>
+</section>
+
+    <!-- Required Js -->
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    
+    <script src="assets/js/pcoded.min.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Help You Help Us</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    
+
+</head>
+<body class="">
+	<!-- [ Pre-loader ] start -->
+	<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div>
+	<!-- [ Pre-loader ] End -->
+	<!-- [ navigation menu ] start -->
+	<nav class="pcoded-navbar menu-light ">
+		<div class="navbar-wrapper  ">
+			<div class="navbar-content scroll-div " >
+				
+				<div class="">
+					<div class="main-menu-header">
+						<img class="img-radius" src="assets/images/user/mlogo.png" alt="User-Profile-Image">
+						<div class="user-details">
+							<div id="more-details">Help You Help Us </i></div>
+							<div id="more-details">सबका साथ सबका विकास </i></div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<ul class="nav pcoded-inner-navbar ">
+					<li class="nav-item pcoded-menu-caption">
+					    <label>Navigation</label>
+					</li>
+					<li class="nav-item">
+					    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+					</li>
+										
+				</ul>
+				
+				
+			</div>
+		</div>
+	</nav>
+	<!-- [ navigation menu ] end -->
+	<!-- [ Header ] start -->
+	<header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
+		
+				
+				<div class="m-header">
+					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+					<a href="#!" class="b-brand">
+						<!-- ========   change your logo hear   ============ -->
+						
+						<img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+					</a>
+					<a href="#!" class="mob-toggler">
+						<i class="feather icon-more-vertical"></i>
+					</a>
+				</div>
+				
+				<ul class="navbar-nav ml-auto">
+						
+						<li>
+						<div class="pro-head" alt ="User-Profile-Image">
+										
+										<a href="auth-signin.html" class="dud-logout" title="Login">
+											<i class="feather icon-user"></i>
+										</a>
+									</div>
+							
+						</li>
+					</ul>
+			
+	</header>
+	<!-- [ Header ] end -->
+	
+	
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Dashboard Analytics</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#!">Dashboard Analytics</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <!-- support-section start -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card support-bar overflow-hidden">
+                            <div class="card-body pb-0">
+                                <h2 class="m-0">1350</h2>
+                                <span class="text-c-blue">Send Requests</span>
+                                <p class="mb-3 mt-3">Total number of support requests that come in.</p>
+                            </div>
+                            <div id="support-chart"></div>
+                            <div class="card-footer bg-primary text-white">
+                                <div class="row text-center">
+                                    <div class="col">
+                                        <h4 class="m-0 text-white">100</h4>
+                                        <span>Open</span>
+                                    </div>
+                                    <div class="col">
+                                        <h4 class="m-0 text-white">75</h4>
+                                        <span>Running</span>
+                                    </div>
+                                    <div class="col">
+                                        <h4 class="m-0 text-white">55</h4>
+                                        <span>Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card support-bar overflow-hidden">
+                            <div class="card-body pb-0">
+                                <h2 class="m-0">2700</h2>
+                                <span class="text-c-green">Receive Requests</span>
+                                <p class="mb-3 mt-3">Total number of support requests that come in.</p>
+                            </div>
+                            <div id="support-chart1"></div>
+                            <div class="card-footer bg-success text-white">
+                                <div class="row text-center">
+                                    <div class="col">
+                                        <h4 class="m-0 text-white">200</h4>
+                                        <span>Open</span>
+                                    </div>
+                                    <div class="col">
+                                        <h4 class="m-0 text-white">100</h4>
+                                        <span>Running</span>
+                                    </div>
+                                    <div class="col">
+                                        <h4 class="m-0 text-white">50</h4>
+                                        <span>Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- support-section end -->
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <!-- page statustic card start -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-yellow">₹30200</h4>
+                                        <h6 class="text-muted m-b-0">All Flow</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="feather icon-bar-chart-2 f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-yellow">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">100% change</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-green">200+</h4>
+                                        <h6 class="text-muted m-b-0">Page Views Hours</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="feather icon-file-text f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-green">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">100% change</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-red">300</h4>
+                                        <h6 class="text-muted m-b-0">Task</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="feather icon-calendar f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-red">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">100% change</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h4 class="text-c-blue">500</h4>
+                                        <h6 class="text-muted m-b-0">Downloads</h6>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <i class="feather icon-thumbs-down f-28"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-c-blue">
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <p class="text-white m-b-0">100% change</p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <i class="feather icon-trending-up text-white f-16"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- page statustic card end -->
+            </div>
+            <!-- prject ,team member start -->
+            <div class="col-xl-6 col-md-12">
+                <div class="card table-card">
+                    <div class="card-header">
+                        <h5>Projects</h5>
+                        <div class="card-header-right">
+                            <div class="btn-group card-option">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="feather icon-more-horizontal"></i>
+                                </button>
+								<!--
+                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                    <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                    <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                    <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                </ul>
+								-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                         Top Katppas
+                                        </th>
+                                        <th>Id's</th>
+                                        <th>Join Date</th>
+                                        <th class="text-right">Values</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+										<!--
+                                            <div class="chk-option">
+                                                <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </div>
+											-->
+                                            <div class="d-inline-block align-middle">
+                                                <img src="assets/images/user/mlogo.png" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                <div class="d-inline-block">
+                                                    <h6>Satish</h6>
+                                                    <p class="text-muted m-b-0">Satish07.1985@gmail.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>HYHU357</td>
+                                        <td>Feb, 20</td>
+                                        <td class="text-right"><label class="badge badge-light-danger">₹ 3000</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            
+                                            <div class="d-inline-block align-middle">
+                                                <img src="assets/images/user/mlogo.png" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                <div class="d-inline-block">
+                                                    <h6>Dharmendra Prajapati</h6>
+                                                    <p class="text-muted m-b-0">dharmenr007@gmail.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>HYHU230</td>
+                                        <td>March, 11</td>
+                                        <td class="text-right"><label class="badge badge-light-primary">₹ 3000</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           
+                                            <div class="d-inline-block align-middle">
+                                                <img src="assets/images/user/mlogo.png" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                <div class="d-inline-block">
+                                                    <h6>Pinky Singh</h6>
+                                                    <p class="text-muted m-b-0">pinkysingh002@gmail.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>HYHU634</td>
+                                        <td>March, 15</td>
+                                        <td class="text-right"><label class="badge badge-light-success">₹ 3000</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            
+                                            <div class="d-inline-block align-middle">
+                                                <img src="assets/images/user/mlogo.png" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                <div class="d-inline-block">
+                                                    <h6>Sonu Kiran</h6>
+                                                    <p class="text-muted m-b-0">skinran5.19@gmail.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>HYHU998</td>
+                                        <td>March, 12</td>
+                                        <td class="text-right"><label class="badge badge-light-primary">₹ 6000</label></td>
+                                    </tr>
+									 <tr>
+                                        <td>
+                                            
+                                            <div class="d-inline-block align-middle">
+                                                <img src="assets/images/user/mlogo.png" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                <div class="d-inline-block">
+                                                    <h6>Pramod</h6>
+                                                    <p class="text-muted m-b-0">pramod15.1998@gmail.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>HYHU880</td>
+                                        <td>March, 16</td>
+                                        <td class="text-right"><label class="badge badge-light-primary">₹ 12000</label></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-12">
+                <div class="card latest-update-card">
+                    <div class="card-header">
+                        <h5>Latest Updates</h5>
+                        <div class="card-header-right">
+                            <div class="btn-group card-option">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="feather icon-more-horizontal"></i>
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="latest-update-box">
+                            <div class="row p-t-30 p-b-30">
+                                <div class="col-auto text-right update-meta">
+                                    <p class="text-muted m-b-0 d-inline-flex">2 hrs ago</p>
+                                    <i class="feather icon-twitter bg-twitter update-icon"></i>
+                                </div>
+                                <div class="col">
+                                    <a href="#!">
+                                        <h6>+ 52 Followers</h6>
+                                    </a>
+                                    <p class="text-muted m-b-0">You’re getting more and more followers, keep it up!</p>
+                                </div>
+                            </div>
+                            <div class="row p-b-30">
+                                <div class="col-auto text-right update-meta">
+                                    <p class="text-muted m-b-0 d-inline-flex">4 hrs ago</p>
+                                    <i class="feather icon-briefcase bg-c-red update-icon"></i>
+                                </div>
+                                <div class="col">
+                                    <a href="#!">
+                                        <h6>+ 5 New Tasks were added!</h6>
+                                    </a>
+                                    <p class="text-muted m-b-0">Congratulations!</p>
+                                </div>
+                            </div>
+							<div class="row p-b-30">
+                                <div class="col-auto text-right update-meta">
+                                    <p class="text-muted m-b-0 d-inline-flex">8 hrs ago</p>
+                                    <i class="feather icon-briefcase bg-c-red update-icon"></i>
+                                </div>
+                                <div class="col">
+                                    <a href="#!">
+                                        <h6>+ 5 Task Completed!</h6>
+                                    </a>
+                                    <p class="text-muted m-b-0">Congratulations!</p>
+                                </div>
+                            </div>
+							
+                            <div class="row p-b-0">
+                                <div class="col-auto text-right update-meta">
+                                    <p class="text-muted m-b-0 d-inline-flex">2 day ago</p>
+                                    <i class="feather icon-facebook bg-facebook update-icon"></i>
+                                </div>
+                                <div class="col">
+                                    <a href="#!">
+                                        <h6>+10 Friend Requests</h6>
+                                    </a>
+                                    <p class="text-muted m-b-10">This is great, keep it up!</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <tr>
+                                                <td class="b-none">
+                                                    <a href="#!" class="align-middle">
+                                                        <img src="assets/images/user/mlogo.png" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6>Admin HYHU</h6>
+                                                            <p class="text-muted m-b-0">सबका साथ सबका विकास</p>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="#!" class="b-b-primary text-primary">View all Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- prject ,team member start -->
+            <!-- seo start -->
+            <div class="col-xl-4 col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <h3>756</h3>
+                                <h6 class="text-muted m-b-0">Visits<i class="fa fa-caret-down text-c-red m-l-10"></i></h6>
+                            </div>
+                            <div class="col-6">
+                                <div id="seo-chart1" class="d-flex align-items-end"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <h3>49.54%</h3>
+                                <h6 class="text-muted m-b-0">Bounce Rate<i class="fa fa-caret-up text-c-green m-l-10"></i></h6>
+                            </div>
+                            <div class="col-6">
+                                <div id="seo-chart2" class="d-flex align-items-end"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <h3>1,564</h3>
+                                <h6 class="text-muted m-b-0">Products<i class="fa fa-caret-down text-c-red m-l-10"></i></h6>
+                            </div>
+                            <div class="col-6">
+                                <div id="seo-chart3" class="d-flex align-items-end"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- seo end -->
+            <!-- Latest Customers end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+<!-- [ Main Content ] end -->
+    <!-- Warning Section start -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+        <div class="ie-warning">
+            <h1>Warning!!</h1>
+            <p>You are using an outdated version of Internet Explorer, please upgrade
+               <br/>to any of the following web browsers to access this website.
+            </p>
+            <div class="iew-container">
+                <ul class="iew-download">
+                    <li>
+                        <a href="http://www.google.com/chrome/">
+                            <img src="assets/images/browser/chrome.png" alt="Chrome">
+                            <div>Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <img src="assets/images/browser/firefox.png" alt="Firefox">
+                            <div>Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com">
+                            <img src="assets/images/browser/opera.png" alt="Opera">
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.apple.com/safari/">
+                            <img src="assets/images/browser/safari.png" alt="Safari">
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="assets/images/browser/ie.png" alt="">
+                            <div>IE (11 & above)</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sorry for the inconvenience!</p>
+        </div>
+    <![endif]-->
+    <!-- Warning Section Ends -->
+
+    <!-- Required Js -->
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+
+<!-- Apex Chart -->
+<script src="assets/js/plugins/apexcharts.min.js"></script>
+
+
+<!-- custom-chart js -->
+<script src="assets/js/pages/dashboard-main.js"></script>
+</body>
+
+</html>
