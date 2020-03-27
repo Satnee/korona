@@ -1,76 +1,182 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-	<title>Ablepro v8.0 bootstrap admin template by Phoenixcoded</title>
-	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 11]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="">
-	<meta name="author" content="Phoenixcoded" />
-	<!-- Favicon icon -->
-	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-
-	<!-- vendor css -->
-	<link rel="stylesheet" href="assets/css/style.css">
-	
-	
-
-
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>Registration</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+	body{
+		color: #fff;
+		background: #63738a;
+		font-family: 'Roboto', sans-serif;
+	}
+    .form-control{
+		height: 40px;
+		box-shadow: none;
+		color: #969fa4;
+	}
+	.form-control:focus{
+		border-color: #5cb85c;
+	}
+    .form-control, .btn{        
+        border-radius: 3px;
+    }
+	.signup-form{
+		width: 400px;
+		margin: 0 auto;
+		padding: 30px 0;
+	}
+	.signup-form h2{
+		color: #636363;
+        margin: 0 0 15px;
+		position: relative;
+		text-align: center;
+    }
+	.signup-form h2:before, .signup-form h2:after{
+		content: "";
+		height: 2px;
+		width: 30%;
+		background: #d4d4d4;
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+	}	
+	.signup-form h2:before{
+		left: 0;
+	}
+	.signup-form h2:after{
+		right: 0;
+	}
+    .signup-form .hint-text{
+		color: #999;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+    .signup-form form{
+		color: #999;
+		border-radius: 3px;
+    	margin-bottom: 15px;
+        background: #f2f3f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+	.signup-form .form-group{
+		margin-bottom: 20px;
+	}
+	.signup-form input[type="checkbox"]{
+		margin-top: 3px;
+	}
+	.signup-form .btn{        
+        font-size: 16px;
+        font-weight: bold;		
+		min-width: 140px;
+        outline: none !important;
+    }
+	.signup-form .row div:first-child{
+		padding-right: 10px;
+	}
+	.signup-form .row div:last-child{
+		padding-left: 10px;
+	}    	
+    .signup-form a{
+		color: #fff;
+		text-decoration: underline;
+	}
+    .signup-form a:hover{
+		text-decoration: none;
+	}
+	.signup-form form a{
+		color: #5cb85c;
+		text-decoration: none;
+	}	
+	.signup-form form a:hover{
+		text-decoration: underline;
+	}  
+</style>
 </head>
-
-<!-- [ auth-signup ] start -->
-<div class="auth-wrapper">
-	<div class="auth-content">
-		<div class="card">
-			<div class="row align-items-center text-center">
-				<div class="col-md-12">
-					<div class="card-body">
-						<img src="assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
-						<h4 class="mb-3 f-w-400">Sign up</h4>
-						<div class="form-group mb-3">
-							<label class="floating-label" for="Username">Username</label>
-							<input type="text" class="form-control" id="Username" placeholder="">
-						</div>
-						<div class="form-group mb-3">
-							<label class="floating-label" for="Email">Email address</label>
-							<input type="text" class="form-control" id="Email" placeholder="">
-						</div>
-						<div class="form-group mb-4">
-							<label class="floating-label" for="Password">Password</label>
-							<input type="password" class="form-control" id="Password" placeholder="">
-						</div>
-						<div class="custom-control custom-checkbox  text-left mb-4 mt-2">
-							<input type="checkbox" class="custom-control-input" id="customCheck1">
-							<label class="custom-control-label" for="customCheck1">Send me the <a href="#!"> Newsletter</a> weekly.</label>
-						</div>
-						<button class="btn btn-primary btn-block mb-4">Sign up</button>
-						<p class="mb-2">Already have an account? <a href="auth-signin.html" class="f-w-400">Signin</a></p>
-					</div>
+<body>
+<div class="signup-form">
+    <form action="auth-signin.html" method="post">
+		<h2>Register</h2>
+		<p class="hint-text">Create your account.takes a minute.</p>
+        <div class="form-group">
+			<div class="row">
+				<div class="col-xs-6">
+				<input type="text" class="form-control" name="first_name" placeholder="First Name" required="required">
 				</div>
+				<div class="col-xs-6">
+				<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">
+				</div>
+			</div>        	
+        </div>
+        <div class="form-group">
+        	<input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="required">
+        </div>
+		<div class="form-group">
+		<div class="row">
+				<div class="col-xs-6"><input type="text" class="form-control" name="pin name" placeholder="Pin No*" required="required"></div>
+				<div class="col-xs-6"><input type="text" class="form-control" name="sponce name" placeholder="Sponcer Id*" required="required"></div>
 			</div>
-		</div>
-	</div>
+			</div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="user id" placeholder="User Id" required="required">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="mobile" placeholder="mobile no" required="required">
+        </div>        
+       
+		<div class="form-group">
+            <button class="submit btn btn-success btn-lg btn-block">Register Now</button>
+			
+        </div>
+		<div class="text-center">Already have an account? <a href="auth-signin.html">Sign in</a></div>
+    </form>
+	
 </div>
-<!-- [ auth-signup ] end -->
-
-<!-- Required Js -->
-<script src="assets/js/vendor-all.min.js"></script>
-<script src="assets/js/plugins/bootstrap.min.js"></script>
-<script src="assets/js/ripple.js"></script>
-<script src="assets/js/pcoded.min.js"></script>
-
-
-
 </body>
 
+<script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
+<script src="assets/js/index.js"></script>
+
+<script>
+    $.fn.getFormData = function() {
+      var fields = this.find('[name]');
+	  var result = {};
+      $.each(fields, function (i, el) {
+	    result[el.name] = el.value;
+		
+      });
+      return result;
+    };
+      var config = {
+          apiKey: "AIzaSyA063-ngsexQ0rhIvtHRKP0LmB0yBrH5vk",
+          authDomain: "oneclick-73406.firebaseapp.com",
+          databaseURL: "https://oneclick-73406.firebaseio.com",
+          projectId: "oneclick-73406",
+          storageBucket: "oneclick-73406.appspot.com",
+          messagingSenderId: "69122383434"
+      };
+      var fb = firebase.initializeApp(config);
+      var user_id;
+      $('.submit').on('click', function (e) {
+        e.preventDefault();
+		//e.notEmpty();
+		
+        var updates = {};
+        user_id = user_id ? user_id : fb.database().ref().child('user-data').push().key;
+		
+        updates[user_id] = $('form').getFormData();
+        fb.database().ref().child('user-data').update(updates);
+      });
+    </script>
 </html>
