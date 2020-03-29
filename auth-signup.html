@@ -11,6 +11,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<script src="/__/firebase/7.12.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.12.0/firebase-auth.js"></script>
+  <script src="/__/firebase/init.js"></script>
 <style type="text/css">
 	body{
 		color: #fff;
@@ -98,55 +102,89 @@
 	}	
 	.signup-form form a:hover{
 		text-decoration: underline;
-	}  
+	}
+	fieldset{
+	margin-bottom:10px;
+	border:none;
+	}
+	legend{
+	display:block;
+	margin-bottom:8px;
+	}
+	.section {
+  background-color: rgb(68, 114, 221);
+  color: white;
+  height: 29px;
+  display: inline-block;
+  width: 29px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 4px;
+  font-size: 0.7em;
+}
 </style>
 </head>
 <body>
+
 <div class="signup-form">
-    <form action="auth-signin.html" method="post">
+    <form action="" method ="post" id="registrationform">
+		
 		<h2>Register</h2>
+		
 		<p class="hint-text">Create your account.takes a minute.</p>
+		<fieldset>
+		<legend><span class="section">1</span>Your Basic Info</legend>
         <div class="form-group">
 			<div class="row">
 				<div class="col-xs-6">
-				<input type="text" class="form-control" name="first_name" placeholder="First Name" required="required">
+				<input type="text" class="form-control" id="first_name" placeholder="First Name" required="required">
 				</div>
 				<div class="col-xs-6">
-				<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">
+				<input type="text" class="form-control" id="last_name" placeholder="Last Name" required="required">
 				</div>
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required">
+        	<input type="email" class="form-control" id="email" placeholder="Email" required="required">
         </div>
 		<div class="form-group">
-            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="required">
+            <input type="password" class="form-control" id="password" placeholder="Password" required="required">
         </div>
+		</fieldset>
+
+		<fieldset>
+		<!--section 2-->
+		<legend><span class="section">2</span>Profile</legend>
 		<div class="form-group">
 		<div class="row">
-				<div class="col-xs-6"><input type="text" class="form-control" name="pin name" placeholder="Pin No*" required="required"></div>
-				<div class="col-xs-6"><input type="text" class="form-control" name="sponce name" placeholder="Sponcer Id*" required="required"></div>
+				<div class="col-xs-6"><input type="text" class="form-control" id="pin_name" placeholder="Pin No*" required="required"></div>
+				<div class="col-xs-6"><input type="text" class="form-control" id="sponce_name" placeholder="Sponcer Id*" required="required"></div>
 			</div>
 			</div>
         <div class="form-group">
-            <input type="text" class="form-control" name="user id" placeholder="User Id" required="required">
+            <input type="text" class="form-control" id="user_id" placeholder="User Id" required="required">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" name="mobile" placeholder="mobile no" required="required">
+            <input type="text" class="form-control" id="mobile" placeholder="mobile no" required="required">
         </div>        
        
 		<div class="form-group">
-            <button class="submit btn btn-success btn-lg btn-block">Register Now</button>
-			
-        </div>
+		<button type="submit" sendMessage() class="btn btn-success btn-lg btn-block">Register</button>
+		<!--
+            <button onclick ="handleSignUp()" class="submit btn btn-success btn-lg btn-block">Register Now</button></div>
+ 	-->
+	</fieldset>
+		
 		<div class="text-center">Already have an account? <a href="auth-signin.html">Sign in</a></div>
     </form>
 	
 </div>
 </body>
 
-<script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
-<script src="assets/js/index.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+<script src="index1.js"></script>
+<!--
 
 <script>
     $.fn.getFormData = function() {
@@ -159,7 +197,7 @@
       return result;
     };
       var config = {
-          apiKey: "AIzaSyA063-ngsexQ0rhIvtHRKP0LmB0yBrH5vk",
+          apiKey: "AIzaSyA063-ngsexQ0rhIvtHRKP0LmB0yBrH5vk",	
           authDomain: "oneclick-73406.firebaseapp.com",
           databaseURL: "https://oneclick-73406.firebaseio.com",
           projectId: "oneclick-73406",
@@ -178,5 +216,169 @@
         updates[user_id] = $('form').getFormData();
         fb.database().ref().child('user-data').update(updates);
       });
-    </script>
+    
+    // Handles the sign in button press.
+     
+    function toggleSignIn() {
+      if (firebase.auth().currentUser) {
+        // [START signout]
+        firebase.auth().signOut();
+        // [END signout]
+      } else {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        if (email.length < 4) {
+          alert('Please enter an email address.');
+          return;
+        }
+        if (password.length < 4) {
+          alert('Please enter a password.');
+          return;
+        }
+        // Sign in with email and pass.
+        // [START authwithemail]
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode === 'auth/wrong-password') {
+            alert('Wrong password.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+          document.getElementById('quickstart-sign-in').disabled = false;
+          // [END_EXCLUDE]
+        });
+        // [END authwithemail]
+      }
+      document.getElementById('quickstart-sign-in').disabled = true;
+    }
+
+    /**
+     * Handles the sign up button press.
+     */
+    function handleSignUp() {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Please enter a password.');
+        return;
+      }
+      // Create user with email and pass.
+      // [START createwithemail]
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode == 'auth/weak-password') {
+          alert('The password is too weak.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+		//document.getElementById('quickstart-sign-in').disabled = false;
+        // [END_EXCLUDE]
+      });
+      // [END createwithemail]
+    }
+
+    /**
+     * Sends an email verification to the user.
+     */
+    function sendEmailVerification() {
+      // [START sendemailverification]
+      firebase.auth().currentUser.sendEmailVerification().then(function() {
+        // Email Verification sent!
+        // [START_EXCLUDE]
+        alert('Email Verification Sent!');
+        // [END_EXCLUDE]
+      });
+      // [END sendemailverification]
+    }
+
+    function sendPasswordReset() {
+      var email = document.getElementById('email').value;
+      // [START sendpasswordemail]
+      firebase.auth().sendPasswordResetEmail(email).then(function() {
+        // Password Reset Email Sent!
+        // [START_EXCLUDE]
+        alert('Password Reset Email Sent!');
+        // [END_EXCLUDE]
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode == 'auth/invalid-email') {
+          alert(errorMessage);
+        } else if (errorCode == 'auth/user-not-found') {
+          alert(errorMessage);
+        }
+        console.log(error);
+        // [END_EXCLUDE]
+      });
+      // [END sendpasswordemail];
+    }
+
+    /**
+     * initApp handles setting up UI event listeners and registering Firebase auth listeners:
+     *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
+     *    out, and that is where we update the UI.
+     */
+    function initApp() {
+      // Listening for auth state changes.
+      // [START authstatelistener]
+      firebase.auth().onAuthStateChanged(function(user) {
+        // [START_EXCLUDE silent]
+        document.getElementById('quickstart-verify-email').disabled = true;
+        // [END_EXCLUDE]
+        if (user) {
+          // User is signed in.
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+          // [START_EXCLUDE]
+          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
+          document.getElementById('quickstart-sign-in').textContent = 'Sign out';
+          document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+          if (!emailVerified) {
+            document.getElementById('quickstart-verify-email').disabled = false;
+          }
+          // [END_EXCLUDE]
+        } else {
+          // User is signed out.
+          // [START_EXCLUDE]
+          document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
+          document.getElementById('quickstart-sign-in').textContent = 'Sign in';
+          document.getElementById('quickstart-account-details').textContent = 'null';
+          // [END_EXCLUDE]
+        }
+        // [START_EXCLUDE silent]
+        document.getElementById('quickstart-sign-in').disabled = false;
+        // [END_EXCLUDE]
+      });
+      // [END authstatelistener]
+
+      document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
+      document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
+      document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
+      document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
+    }
+
+    window.onload = function() {
+      initApp();
+    };
+	</script>
+	-->
 </html>
